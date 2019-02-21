@@ -105,7 +105,7 @@ while True:
 	# if the video writer is None *AND* we are supposed to write
 	# the output video to disk initialize the writer
 	if writer is None and args["output"] is not None:
-		fourcc = cv2.cv.VideoWriter_fourcc(*"XVID")
+		fourcc = cv2.VideoWriter('output.avi',cv2.VideoWriter_fourcc(*'XVID'), 20.0 (640,480))
 		writer = cv2.VideoWriter(args["output"], fourcc, 24,
 			(frame.shape[1], frame.shape[0]), True)
 
